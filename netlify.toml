@@ -12,7 +12,3 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=0, must-revalidate"
-
-[[context]]
-  path = "/api/*"
-  command = "npm run api:serve"  # Example: Run a backend API during build/deploy
