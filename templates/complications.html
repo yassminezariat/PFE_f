@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic des complications</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+    <style>
+        .custom-image {
+            width: 100%;
+            max-width: 300px; /* Adjust as needed */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .custom-block {
+            text-align: center;
+            padding: 20px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body class="topics-listing-page">
+    <div class="container">
+        <h1>Diagnostic des complications</h1>
+        
+        <div class="custom-block bg-white shadow-lg">
+            <a href="{{ url_for('Diabetes') }}">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <h5 class="mb-2">Cliquez pour aller au Diagnostic de diabète</h5>
+
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename='images/glucose-meter.png') }}" class="custom-block-image img-fluid custom-image" alt="">
+            </a>
+        </div>
+
+        <div class="custom-block bg-white shadow-lg">
+            <a href="{{ url_for('endometrios') }}">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <h5 class="mb-2">Cliquez pour aller au Diagnostic de l'Endométriose</h5>
+
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+
+                <img src="{{ url_for('static', filename='images/endoima.png') }}" class="custom-block-image img-fluid custom-image" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

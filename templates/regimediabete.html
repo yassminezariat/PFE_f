@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Detail Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">    
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi bi-gender-female"></i>
+                        <span>SopkDetec</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Bienvenue</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Explorer les sujets</a>
+                            </li>
+    
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">QFPs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">
+                                La motivation est ce qui t'a poussé à commencer L'habitude est ce qui va t'aider à continuer. </h2>
+                        </div>
+
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="topics-detail-section section-padding" id="topics-detail">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 m-auto">
+
+                            <h3 class="mb-4">Tout d'abord voici les produits naturels pour lutter contre le diabète
+                            </h3>
+                            <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5"> 
+                                <div class="d-flex">
+                                    <img src="{{ url_for('static', filename='images/ail.png') }} " class=custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Ail</h5>
+
+                                            <p class="mb-0"> Assure la régulation de la glycémie, la réduction de l'insulino-résistance et la prévention des complications cardiovasculaires, grâce à ses propriétés anti-inflammatoires et antioxydantes.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <img src="{{ url_for('static', filename='images/aloe.png') }} "  class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Aloe Vera</h5>
+
+                                            <p class="mb-0">L'aloe vera offre plusieurs bienfaits pour les personnes diabétiques, notamment en aidant à réguler la glycémie, en améliorant la sensibilité à l'insuline et en réduisant les niveaux de lipides sanguins. Ses composés bioactifs, tels que les polysaccharides et les phytostérols, contribuent à ces effets bénéfiques.</p>
+                                            <p class="mb-0">1 cuillère, 2 fois par jour, avant les repas.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <img src="{{ url_for('static', filename='images/avoine.png') }} "  class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Avoine</h5>
+
+                                            <p class="mb-0">Elle est riche en fibres solubles, ce qui aide à stabiliser la glycémie en ralentissant l'absorption des glucides.</p>
+                                            <p class="mb-0">Mélanger à l'eau du bain une infusion faite avec 100 g de paille d'avoine pour 1 litre d'eau bouillante.
+                                                Comme la paille d’avoine est difficile à trouver, on peut aussi mettre environ 250 g de flocons d'avoine dans une chaussette ou dans une pochette en mousseline et faire bouillir dans 1 litre d’eau pendant quelques minutes. Presser la pochette et verser le liquide ainsi extrait dans l'eau du bain. Utiliser la pochette pour se frictionner.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="d-flex">
+                                    <img src="{{ url_for('static', filename='images/stevia.png') }} "  class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Stévia</h5>
+
+                                            <p class="mb-0"> la stévia est une alternative intéressante au sucre.</p>
+                                            <p class="mb-0">Elle ne contient pas de glucides ni de calories, et elle n'affecte pas la glycémie. </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="d-flex">
+                                    <img src="{{ url_for('static', filename='images/omega.png') }} "  class="custom-block-image img-fluid" alt="">
+
+                                    <div class="custom-block-topics-listing-info d-flex">
+                                        <div>
+                                            <h5 class="mb-2">Oméga-3 (huile de poisson)
+                                            </h5>
+
+                                            <p class="mb-0"> Ces acides gras essentiels sont reconnus pour leurs propriétés anti-inflammatoires, ce qui peut aider à réduire l'inflammation associée au diabète et à ses complications, telles que les maladies cardiovasculaires.
+
+                                                De plus, les oméga-3 peuvent contribuer à améliorer la sensibilité à l'insuline et à réduire les niveaux de triglycérides sanguins, ce qui est bénéfique pour le contrôle de la glycémie et la santé cardiovasculaire</p>
+                                       <p class="mb-0"> Maquereau ;
+                                        Saumon Atlantique ;
+                                        Truite ;
+                                        Hareng ;
+                                        Flétan ;
+                                        Sardines en conserve ;
+                                        Crevettes ;
+                                        Morue ;
+                                        Pétoncles.</p>
+                                            </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                                  
+                            <h3 class="mb-4">Voici la Pyramide Alimentaire qui convient à vous </h3>
+                            <img src="{{ url_for('static', filename='images/pyramide.png') }} "  alt="">
+
+                            <h3 class="mb-4">Voici un Tableau qui montre des taux de glycémie </h3>
+
+                            <div>
+                                <style>
+                                    table {
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                    }
+                                    td, th {
+                                        border: 2px solid black;
+                                        padding: 10px;
+                                        text-align: left;
+                                    }
+                                </style>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><p><span>Catégories d'aliments</span></p></td>
+                                            <td><p><span>IG bas (inférieur ou égal à 55)</span></p></td>
+                                            <td><p><span>IG moyen (de 56 à 69)</span></p></td>
+                                            <td><p><span>IG élevé (supérieur ou égal à 70)</span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>Pains</span></p></td>
+                                            <td><p><span>Pain à grains entiers</span></p></td>
+                                            <td><p><span>Pain de blé complet<br> Pain de seigle<br> Pain pita</span></p></td>
+                                            <td><p><span>Pain blanc<br> Pain à bagel et à burger</span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>Céréales</span></p></td>
+                                            <td><p><span>All Bran<br> Son d'avoine<br> Céréales avec psyllium</span></p></td>
+                                            <td><p><span>Gruau</span></p></td>
+                                            <td><p><span>Flocons de son<br> Flocon de maïs<br> Riz soufflé</span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>Produits céréaliers</span></p></td>
+                                            <td><p><span>Orge<br> Boulgour<br> Pâtes al dente<br> Riz étuvé</span></p></td>
+                                            <td><p><span>Riz basmati<br> Riz brun<br> Couscous</span></p></td>
+                                            <td><p><span>Riz à grain court</span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>Autres</span></p></td>
+                                            <td><p><span>Patate douce<br> Pois chiches<br> Haricots rouges<br> Fèves</span></p></td>
+                                            <td><p><span>Pommes de terre à l'eau<br> Maïs soufflé<br> Pois</span></p></td>
+                                            <td><p><span>Pommes de terre au four<br> Biscuits apéritifs</span></p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            
+                            
+
+
+
+                            <h3 class="mb-4">Des portions à consommer par jour</h3>
+                            <div>
+
+                                <table><tbody><tr><td><p><span>Catégorie d'aliments</span></p></td><td><p><span>Exemples d'aliments</span></p></td><td><p><span>Portions à consommer par jour</span></p></td></tr><tr><td><p><span>Pains et féculents</span></p></td><td><p><span>Son d'avoine<br> Céréales d'avoine<br> Pain de son d'avoine<br> Orge cuit<br> Quinoa<br> Pain de seigle</span></p></td><td><p><span>1 à 2</span></p></td></tr><tr><td><p><span>Légumes</span></p></td><td><p><span>Navets<br> Asperges<br> Brocolis<br> Choux de Bruxelles<br> Haricots verts<br> Oignon<br> Patates douces<br> Artichaut</span></p></td><td><p><span>1</span></p></td></tr><tr><td><p><span>Fruits</span></p></td><td><p><span>Abricots secs<br> Mangue<br> Orange<br> Pamplemousse<br> Pêche<br> poire<br> Pomme</span></p></td><td><p><span>1</span></p></td></tr><tr><td><p><span>Suppléments en fibres</span></p></td><td><p><span>Psyllium (1 cuillère à soupe dans un verre d'eau)</span></p></td><td><p><span>1</span></p></td></tr></tbody></table>
+                            </div>
+
+
+
+
+                            <h3 class="mb-4">Voici un menu type d’un jour</h3>
+                            <div>
+                                <table><tbody><tr><td><p>Matin</p></td><td><p>Petit-déjeuner Amsterdam (orange, pain de blé entier, beurre d’arachide et lait)</p></td></tr><tr><td><p>Collation</p></td><td><p>Yaourt et granola</p></td></tr><tr><td><p>Midi</p></td><td><p>Potage aux carottes parfumé au cari (fait à l’avance), Salade de lentilles et tomates à la menthe et Une tranche de pain (blé entier)</p></td></tr><tr><td><p>Collation</p></td><td><p>Amandes</p></td></tr><tr><td><p>Soir</p></td><td><p>Filets de sole à la florentine et Orge pilaf, Fromage, Une tranche de pain (blé entier)et Salade de petits fruits</p></td></tr></tbody></table>
+
+                            </div> 
+                            <h3 class="mb-4">Que faire en cas d'hypoglycémie ?</h3>
+                            <p>Tant que la glycémie n'est pas revenue à la normale, on conseille de se "resucrer" toutes les 15 minutes. Si les symptômes ont disparus mais qu'aucun repas n'est prévu dans l'heure qui suit, il faut prendre une petite collation pour prévenir une autre crise. Cette collation se compose par exemple d'un laitage et de deux biscuits peu sucrés.</p>
+
+                                <p>En cas d'hypoglycémie, il faut prendre (au choix) : </p>
+                                <p>*  1/2 verre de jus de fruits ou de sodas sucré </p>
+                               <p>* 5 pastilles de dextrosol</p>
+                                <p>* 3 sucres</p>
+                                <p>* 1 cuillère à soupe de sucre ou de miel</p>                            
+
+                            <div class="row my-4">
+                            </div>
+
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi bi-gender-female"></i>
+                            <span>SopkDetec</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Bienvenu</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">QFPs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                yassmine.zariat@esprit.tn <br>
+                                contact@itgust-group.tn
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4"> 
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+<!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+    </body>
+</html>

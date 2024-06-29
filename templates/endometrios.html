@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des données de diabète</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Open Sans", "Segoe WP", "Segoe UI", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #34495E;
+            background: #FCFDFD;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        form {
+            width: 600px;
+            margin: 0 auto 55px;
+            text-align: left;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex: 0 0 45%; /* Makes two form groups fit side by side with some space */
+        }
+
+        .form-group input[type="checkbox"] {
+            display: none;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .form-group input[type="checkbox"] + label {
+            position: relative;
+            padding-left: 75px;
+        }
+
+        .form-group input[type="checkbox"] + label:before,
+        .form-group input[type="checkbox"] + label:after {
+            content: '';
+            position: absolute;
+        }
+
+        .form-group input[type="checkbox"] + label:before {
+            left: 0;
+            top: -3px;
+            width: 65px;
+            height: 30px;
+            background: #DDDDDD;
+            border-radius: 15px;
+            transition: background-color .2s;
+        }
+
+        .form-group input[type="checkbox"] + label:after {
+            width: 20px;
+            height: 20px;
+            transition: all .2s;
+            border-radius: 50%;
+            background: #7F8C9A;
+            top: 5px;
+            left: 5px;
+        }
+
+        .form-group input[type="checkbox"]:checked + label:before {
+            background: #34495E;
+        }
+
+        .form-group input[type="checkbox"]:checked + label:after {
+            background: #39D2B4;
+            left: 40px;
+        }
+
+        .form-group input[type="checkbox"] + label .ui {
+            position: absolute;
+            width: 65px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            top: -3px;
+            transition: all .2s;
+        }
+
+        .form-group input[type="checkbox"] + label .ui:before {
+            content: "non";
+            position: absolute;
+            left: -40px;
+            color: #7F8C9A;
+            transition: all .2s;
+        }
+
+        .form-group input[type="checkbox"]:checked + label .ui:before {
+            content: "oui";
+            left: -60px;
+            color: #39D2B4;
+        }
+
+        .btn-primary {
+            background-color: #00bfa5;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #009688;
+        }
+    </style>
+</head>
+<body class="topics-listing-page">
+    <div class="container">
+        <h1>Analyse des données de l'endométriose</h1>
+        <form id="endometriosis_form" action="/analyser_endometriose" method="POST" class="custom-form contact-form" role="form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="checkbox" id="painful_periods" name="painful_periods">
+                    <label for="painful_periods"><span class="ui"></span>Règles douloureuses</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="heavy_extreme_menstrual_bleeding" name="heavy_extreme_menstrual_bleeding">
+                    <label for="heavy_extreme_menstrual_bleeding"><span class="ui"></span>Saignements menstruels abondants</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="fatigue_chronic_fatigue" name="fatigue_chronic_fatigue">
+                    <label for="fatigue_chronic_fatigue"><span class="ui"></span>Fatigue/Fatigue chronique</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="pelvic_pain" name="pelvic_pain">
+                    <label for="pelvic_pain"><span class="ui"></span>Douleur pelvienne</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="infertility" name="infertility">
+                    <label for="infertility"><span class="ui"></span>Infertilité</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="hormonal_problems" name="hormonal_problems">
+                    <label for="hormonal_problems"><span class="ui"></span>Problèmes hormonaux</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="abdominal_pain_pressure" name="abdominal_pain_pressure">
+                    <label for="abdominal_pain_pressure"><span class="ui"></span>Douleur abdominale/pression</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="extreme_severe_pain" name="extreme_severe_pain">
+                    <label for="extreme_severe_pain"><span class="ui"></span>Douleur extrême</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="painful_bowel_movements" name="painful_bowel_movements">
+                    <label for="painful_bowel_movements"><span class="ui"></span>Douleurs lors des selles</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="lower_back_pain" name="lower_back_pain">
+                    <label for="lower_back_pain"><span class="ui"></span>Douleur au bas du dos</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="cramping" name="cramping">
+                    <label for="cramping"><span class="ui"></span>Crampes</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="irregular_missed_periods" name="irregular_missed_periods">
+                    <label for="irregular_missed_periods"><span class="ui"></span>Règles irrégulières/manquées</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="acne_pimples" name="acne_pimples">
+                    <label for="acne_pimples"><span class="ui"></span>Acné</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="painful_burning_pain_during_sex" name="painful_burning_pain_during_sex">
+                    <label for="painful_burning_pain_during_sex"><span class="ui"></span>Douleur/brûlure lors des rapports</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="decreased_energy_exhaustion" name="decreased_energy_exhaustion">
+                    <label for="decreased_energy_exhaustion"><span class="ui"></span>Énergie diminuée/épuisement</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="pain_chronic_pain" name="pain_chronic_pain">
+                    <label for="pain_chronic_pain"><span class="ui"></span>Douleur/douleur chronique</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="ovarian_cysts" name="ovarian_cysts">
+                    <label for="ovarian_cysts"><span class="ui"></span>Kystes ovariens</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="headaches" name="headaches">
+                    <label for="headaches"><span class="ui"></span>Maux de tête</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="bowel_pain" name="bowel_pain">
+                    <label for="bowel_pain"><span class="ui"></span>Douleur intestinale</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="loss_of_appetite" name="loss_of_appetite">
+                    <label for="loss_of_appetite"><span class="ui"></span>Perte d'appétit</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="bloating" name="bloating">
+                    <label for="bloating"><span class="ui"></span>Ballonnements</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="back_pain" name="back_pain">
+                    <label for="back_pain"><span class="ui"></span>Mal de dos</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="diarrhea" name="diarrhea">
+                    <label for="diarrhea"><span class="ui"></span>Diarrhée</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="bleeding" name="bleeding">
+                    <label for="bleeding"><span class="ui"></span>Saignement</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="vomiting_constant_vomiting" name="vomiting_constant_vomiting">
+                    <label for="vomiting_constant_vomiting"><span class="ui"></span>Vomissements</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="fever" name="fever">
+                    <label for="fever"><span class="ui"></span>Fièvre</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="excessive_bleeding" name="excessive_bleeding">
+                    <label for="excessive_bleeding"><span class="ui"></span>Saignement excessif</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="long_menstruation" name="long_menstruation">
+                    <label for="long_menstruation"><span class="ui"></span>Longue menstruation</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="migraines" name="migraines">
+                    <label for="migraines"><span class="ui"></span>Migraines</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="stomach_cramping" name="stomach_cramping">
+                    <label for="stomach_cramping"><span class="ui"></span>Crampes d'estomac</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="vaginal_pain_pressure" name="vaginal_pain_pressure">
+                    <label for="vaginal_pain_pressure"><span class="ui"></span>Douleur/pression vaginale</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="depression_anxiety" name="depression_anxiety">
+                    <label for="depression_anxiety"><span class="ui"></span>Dépression/Anxiété</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="mood_swings" name="mood_swings">
+                    <label for="mood_swings"><span class="ui"></span>Sautes d'humeur</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="nausea" name="nausea">
+                    <label for="nausea"><span class="ui"></span>Nausées</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="menstrual_clots" name="menstrual_clots">
+                    <label for="menstrual_clots"><span class="ui"></span>Caillots menstruels</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="ibs_like_symptoms" name="ibs_like_symptoms">
+                    <label for="ibs_like_symptoms"><span class="ui"></span>Symptômes similaires au SII</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="abnormal_uterine_bleeding" name="abnormal_uterine_bleeding">
+                    <label for="abnormal_uterine_bleeding"><span class="ui"></span>Saignement utérin anormal</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Analyser</button>
+        </form>
+        <div  class="custom-block bg-white shadow-lg" class="result-message" id="result_message"></div>
+        <div class="custom-block bg-white shadow-lg" class="result-probability" id="result_probability"></div>
+
+
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script>
+        document.getElementById("endometriosis_form").addEventListener("submit", function(event){
+            event.preventDefault();
+    
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/analyser_endometriose", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var resultMessage = response.result_message_endometriose;
+                    var resultProbability = response.result_probability;
+    
+                    // Afficher le résultat dans la zone dédiée
+                    document.getElementById("result_message").innerText = resultMessage;
+                    document.getElementById("result_probability").innerText = "Probability: " + resultProbability;
+    
+                    // Attendre 5 secondes (5000 millisecondes) avant de rediriger
+                    setTimeout(function() {
+                        window.location.href = "/index";
+                    }, 5000); // 5000 millisecondes = 5 secondes
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Detail Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">    
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi bi-gender-female"></i>
+                        <span>SopkDetec</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Bienvenue</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Explorer les sujets</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_3">Comment ça fonctionne ?</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">QFPs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Bienvenu</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Traitement SOPK</li>
+                                    
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">
+                                Médicaments courants utilisés dans le SOPK<br> </h2>
+
+                            <div class="d-flex align-items-center mt-5">
+                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Savoir Plus!</a>
+
+                                <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <div class="topics-detail-block bg-white shadow-lg">
+                                <img src="{{ url_for('static', filename='images/medicaments.png') }}" class="topics-detail-block-image img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="topics-detail-section section-padding" id="topics-detail">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 m-auto">
+
+                            <h3 class="mb-4">Points clés  </h3>
+                            <ul style="list-style-type: circle;">
+
+                            <li>Le SOPK est incurable, mais des traitements peuvent atténuer les symptômes.</li>
+
+                            <li> D'autres médicaments sont utilisés pour traiter l'infertilité ou d'autres complications du SOPK</li>
+                            
+                            <li>Il existe un certain nombre de médicaments couramment utilisés dans le SOPK, tels que la pilule contraceptive orale (OCP), les agents sensibilisants à l'insuline (Metformine), les progestatifs cycliques, les antiandrogènes, les médicaments de perte de poids, de prévention du diabète ou des maladies cardiaques et les traitements de fertilité.</li>
+                            
+                            </ul>
+                            <h3 class="mb-4">Contraceptifs hormonaux</h3>
+                            <p>La pilule contraceptive orale (OCP) est couramment utilisée comme première option médicale dans le traitement du SOPK. Cela est dû à ses multiples effets sur la réduction des symptômes. L'OCP fournit l'hormone œstrogène qui augmente les niveaux d'une protéine appelée globuline liant les hormones sexuelles (SHBG). SHGB absorbe la testostérone libre et réduit les niveaux d’androgènes. L’utilisation à long terme de l’OCP peut également réduire l’excès de poils et la régularité des règles.</p>
+
+
+
+                            <h3 class="mb-4">Metformine</h3>
+                            <p>La metformine peut être utilisée dans le SOPK pour améliorer la régularité menstruelle, la gestion du poids, la résistance à l'insuline et la fertilité. Il a un certain nombre d’effets sur l’organisme, mais le plus important pour les femmes atteintes du SOPK est son effet sur la réduction de la résistance à l’insuline. C'est aussi un médicament peu coûteux.</p>
+
+                            <h3 class="mb-4">Metformine et gestion du poids</h3>
+                            <p>Il a été démontré qu'une gestion du mode de vie comprenant une alimentation saine et une activité physique est efficace pour maintenir et réduire le poids des femmes en surpoids atteintes du SOPK. Cependant, les preuves montrent également que pour certaines femmes qui ne parviennent pas à perdre du poids par le seul mode de vie, le mode de vie et la metformine peuvent être utilisés en association pour aider au maintien du poids et peuvent également contribuer à la perte de poids.</p>
+                            
+                            <h3 class="mb-4">Metformine et fertilité</h3>
+                            <p>La metformine a peu d’effets secondaires. Les effets secondaires les plus fréquemment ressentis sont : nausées temporaires, ballonnements abdominaux, vomissements et perte d'appétit. Ceux-ci peuvent être réduits en commençant avec une dose plus faible et en augmentant selon la tolérance. La forme à libération lente de metformine, prise le soir, a des effets secondaires moins graves que le traitement standard à la metformine.</p>
+
+                            <h3 class="mb-4">Médicament anti-androgène</h3>
+                            <p>Des médicaments antiandrogènes peuvent être utilisés en association avec la pilule contraceptive orale pour réduire la croissance excessive des poils. Ils ne doivent être envisagés pour traiter l'hirsutisme qu'après un minimum de 6 mois de prise de la pilule contraceptive orale, lorsque le laser ou toute autre thérapie esthétique supplémentaire a échoué. La plupart de ces médicaments antiandrogènes sont utilisés hors indication et ne sont pas enregistrés pour le traitement de l'hyperandrogénie. Il est très important d’utiliser des antiandrogènes sans forme de contraception car ils peuvent être nocifs pour l’enfant à naître.</p>
+
+
+
+
+
+                            <div class="row my-4">
+
+
+    
+                            </div>
+
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+
+
+                        <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                            <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                                <h4 class="mb-4 pb-2">Recevoir la newsletter</h4>
+
+                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email " required="">
+
+                                <div class="col-lg-12 col-12">
+                                    <button type="submit" class="form-control">S'abonner</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi bi-gender-female"></i>
+                            <span>SopkDetec</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Bienvenue</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Comment ça fonctionne ?</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">QFPs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                yassmine.zariat@esprit.tn <br>
+                                contact@itgust-group.tn                             </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+<!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+    </body>
+</html>

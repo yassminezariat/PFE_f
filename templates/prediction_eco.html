@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+</head>
+
+<div>
+    <h2>Le diagnostic par l'image échographique</h2>
+    <form id="upload-file" method="post" action="/prediction_eco" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">Veuillez insérer votre échographie </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg" onchange="previewImage(event)">
+        <div class="image-section">
+            <div class="img-preview">
+                <div class="site-header d-flex flex-column justify-content-center align-items-center" class="col-lg-4 col-12 mb-4 mb-lg-0"> 
+                    <div class="custom-block bg-white shadow-lg"> 
+                <img  id="imagePreview" src="#" alt="Preview Image" style="max-width: 300px; max-height: 300px;"/>
+                <p style="color: black;">{{ pred }}</p> <!-- Move the prediction result here -->         
+                   <div class="custom-block bg-white shadow-lg"> 
+                    <p id="predictionResult" style="color: black;"></p>
+        </div>
+            </div>
+        </div>
+    </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg">Prédire!</button>
+            </div>
+        </div>
+        <div class="loader"></div>
+    </form>
+
+</div>
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<script>
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('imagePreview');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+ // Fonction pour soumettre le formulaire et afficher la prédiction
+ document.getElementById('upload-file').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
+
+        var formData = new FormData(this); // Créer un objet FormData pour envoyer le fichier
+
+        // Envoyer une requête AJAX pour soumettre le formulaire
+        fetch('/prediction_eco', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json()) // Convertir la réponse en JSON
+        .then(data => {
+            // Extraire la prédiction du JSON
+            var prediction = data.prediction;
+            // Mettre à jour l'élément HTML avec la prédiction
+            document.getElementById('predictionResult').textContent = prediction;
+            var delai = 3000; // 3 secondes
+
+            // Redirection en fonction de la prédiction avec délai
+            if (prediction === "SOPK détecté") {
+                // Rediriger vers la page du diabète après le délai
+                setTimeout(function() {
+                    window.location.href = "/choix";
+                }, delai);
+            } else {
+                // Rediriger vers la page d'accueil après le délai
+                setTimeout(function() {
+                    window.location.href = "/analyser_diabete";
+                }, delai);
+            }
+        })
+        .catch(error => {
+            console.error('Erreur lors de la soumission du formulaire:', error);
+        });
+    });
+</script>
+{% endblock %}

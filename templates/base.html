@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+       <!-- JAVASCRIPT FILES -->
+       <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+       <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+       <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+       <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+       <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

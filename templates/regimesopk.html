@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Detail Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">    
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+<style>
+    .custom-image {
+        width: 100%;
+        max-width: 300px; /* Adjust as needed */
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .custom-block {
+        text-align: center;
+        padding: 20px; /* Adjust as needed */
+    }
+</style>
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi bi-gender-female"></i>
+                        <span>SopkDetec</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Bienvenue</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Explorer les sujets</a>
+                            </li>
+    
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">QFPs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">
+                                La motivation est ce qui t'a poussé à commencer L'habitude est ce qui va t'aider à continuer. </h2>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="topics-detail-section section-padding" id="topics-detail">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 m-auto">
+
+                            <h3 class="mb-4">Points clés</h3>
+                            <ul style="list-style-type: circle;">
+                            <li>Il n’existe pas de régime alimentaire meilleur qu’un régime alimentaire général et sain pour le SOPK</li> <br>
+                            <li>Manger principalement des aliments naturels que vous cuisinez vous-même est idéal</li><br>
+                             <li>Visez cinq portions de légumes et deux fruits par jour</li>  <br>
+                             <li>Limiter les aliments riches en graisses, en sel et en sucre</li><br>
+                             </ul>
+                             <style>
+                             h4 {
+                                color: pink; 
+                              }
+                            </style>
+                            <h3 class="mb-4"> Comment inverser le SOPK avec un régime    </h3>
+                            <h4> Pensez à réduire les produits laitiers et le gluten </h4>
+
+                            <p>On sait que les produits laitiers et le gluten aggravent les symptômes de certaines femmes atteintes du SOPK. Lorsque notre corps absorbe les protéines laitières et le gluten, cela déclenche une réponse inflammatoire . C’est à ce moment-là que votre système immunitaire attaque vos propres cellules saines ! </p>
+                            <p>Lorsque cela se produit, cela peut entraîner une prise de poids, de l’acné, des problèmes digestifs , etc.</p>
+
+                            <h4>Mangez 3 à 4 repas par jour.</h4>
+                            <p>En tant que diététiste ET personne atteinte du SOPK, je recommande toujours de manger 3 à 4 repas par jour. Habituellement, il s'agit du petit-déjeuner, du déjeuner et du dîner, ainsi que d'une collation entre le petit-déjeuner et le déjeuner ou le déjeuner et le dîner. (Ou les deux, si vous préférez !)</p>
+                            <p>Lorsque vous mangez des repas équilibrés, vous aurez moins de fringales tout au long de la journée et vous serez moins tenté de consommer des aliments malsains qui aggravent vos symptômes et rendent difficile la perte de poids.</p>
+                            
+                            <h4>Boire une tisane. </h4>
+                            <p>La tisane non sucrée présente plusieurs avantages pour la santé des femmes atteintes du SOPK. Il contient des vitamines, des minéraux et des antioxydants sains qui peuvent relancer votre métabolisme, réduire le stress, favoriser un bon sommeil et aider à réguler l'humeur ! </p>
+                            <p>Chaque combinaison d'ingrédients aura des effets différents, voici donc quelques-unes de mes tisanes préférées pour inverser le SOPK : </p>
+                            <ul style="list-style-type: disc;">
+                                <li> <strong>Vert, blanc et noir :</strong> antioxydants et propriétés anti-inflammatoires</li><br>
+                                <li> <strong>Menthe poivrée et menthe verte : </strong> effets anti-androgènes</li><br>
+                                <li> <strong>Cannelle : </strong> améliore la résistance à l'insuline et soulage le stress</li><br>
+                                <li> <strong>Gingembre  :</strong> propriétés anti-inflammatoires et régulation des hormones féminines</li><br>
+                                <li> <strong>Racine de réglisse :</strong> réduit la testostérone et guérit les fringales</li><br>
+
+                            </ul>
+                            <h4>Mangez plus de fibres.</h4>
+                            <p>Les aliments riches en fibres comme les légumes-feuilles foncés, les baies, les grains entiers, les citrouilles et les haricots sont très utiles pour gérer les symptômes du SOPK. Ils aident à soulager les problèmes de digestion, à réguler les déséquilibres hormonaux, à réduire le cholestérol et à maintenir des niveaux d’insuline sains. Ceci est particulièrement utile si vous êtes un Cyster qui lutte contre la résistance à l'insuline due à votre SOPK.</p>
+
+                            <h4>Restez hydraté. </h4>
+                            <p>L'eau est essentielle à tout dans notre corps. Sans une bonne hydratation, vous pouvez ressentir toutes sortes de symptômes négatifs comme une soif constante, une bouche sèche, de la fatigue, des étourdissements et un manque de concentration mentale. Lorsque vous remplacez les boissons sucrées comme le café et les sodas par de l’eau, vous donnez à votre corps quelque chose dont il a vraiment besoin !</p>
+                            <p>Lorsque vous êtes bien hydraté, tout se passe plus facilement. Vous constaterez probablement des améliorations au niveau de la digestion, de l’acné, des douleurs articulaires, de l’énergie, des maux de tête, de la circulation sanguine et de la concentration mentale. L’eau peut également aider à supprimer votre appétit, rendant ainsi la perte de poids beaucoup plus facile !</p>
+                            
+                            <h4>Augmentez l’apport en magnésium.</h4>
+                            <p>Saviez-vous que les femmes atteintes du SOPK sont près de 20 fois plus susceptibles de souffrir d’une carence en magnésium ? C'est la vérité! Lorsque les Cysters reçoivent la bonne quantité de magnésium, ils peuvent constater des améliorations de l’inflammation, de la résistance à l’insuline, des douleurs menstruelles, de la gestion du stress et même du sommeil !</p>
+                            
+                            <h4>Réduisez votre consommation de caféine.</h4>
+                            <p> Pour la caféine , de nombreux Cysters contiennent naturellement des niveaux plus élevés d’hormones de stress. La caféine agit en stimulant votre système nerveux pour vous rendre plus alerte. Votre corps y parvient en produisant plus de cortisol (alias l'hormone du stress). Le cortisol, lorsqu'il est en équilibre avec la mélatonine, est utile pour vous garder calme mais éveillé. Cependant, lorsque l’un ou l’autre dérape, vous êtes stressé et fatigué !</p>
+                            <p>Tout cela signifie simplement que si vous buvez trop de caféine, votre corps produit déjà une surproduction de cortisol, ce qui vous fatigue et vous rend nerveux. Oui, la caféine peut en fait vous fatiguer PLUS. Pensez à réduire la caféine et voyez si vous remarquez une différence. </p>
+                            <h3 class="mb-4">Voici des déjeuners adaptés au SOPK peuvent vous aider à atteindre vos objectifs de santé ! </h3>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    .gallery{
+        width: 900px;
+        display: flex;
+        overflow-x: scroll;
+    }
+    .gallery div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        padding: 10px;
+        flex: none;
+    }
+    .gallery div img{
+        width: 100%;
+        filter: grayscale(100%);
+        transition: transform 0.5s;
+
+    }
+    .gallery::-webkit-scrollbar{
+        display: none;
+
+    }
+    .gallery-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10% auto;
+    }
+    #backBtn, #nextBtn{
+        width: 50px;
+        cursor: pointer;
+        margin: 40px;
+    }
+    .gallery div img:hover{
+        filter: grayscale(0);
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+</style>
+
+    <div class="gallery-wrap">
+        <img src="{{ url_for('static', filename='images/backk.png') }}" id="backBtn"></img>
+        <div class="gallery">
+            <div>
+            
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/1.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/2.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/3.png') }}" alt=""></span>
+
+            </div>
+
+            <div>
+            
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/4.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/5.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/6.png') }}" alt=""></span>
+
+            </div>
+            <div>
+            
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/7.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/8.png') }}" alt=""></span>
+                <span class="custom-block bg-white shadow-lg"> <img src="{{ url_for('static', filename='images/9.png') }}" alt=""></span>
+
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/next.png') }}" id="nextBtn"></img>
+    </div>
+
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        });
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior= "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+        backBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior= "smooth";
+            scrollContainer.scrollLeft -= 900;
+        });
+    </script>
+                            
+
+
+                            <h3 class="mb-4">Un plan de régime SOPK de 7 jours </h3>
+
+                            <div>
+                                <style>
+                                    table {
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                    }
+                                    td, th {
+                                        border: 2px solid black;
+                                        padding: 10px;
+                                        text-align: left;
+                                    }
+                                </style>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><p><span>Le jour</span></p></td>
+                                            <td><p><span>Petit-déjeuner </span></p></td>
+                                            <td><p><span>Déjeuner </span></p></td>
+                                            <td><p><span>Dîner </span></p></td>
+                                            <td><p><span>Collation  </span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 1</strong></span></p></td>
+                                            <td><p><span> Smoothie Framboise Rose</span></p></td>
+                                            <td><p><span>Salade César aux crevettes</span></p></td>
+                                            <td><p><span> Saumon noirci avec riz et légumes </span></p></td>
+                                            <td><p><span> Pêche et prosciutto  </span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 2 </strong></span></p></td>
+                                            <td><p><span>Pudding au chia et tarte aux pommes</span></p></td>
+                                            <td><p><span>Wrap au poulet et au pesto</span></p></td>
+                                            <td><p><span>bols de tacos au poisson </span></p></td>
+                                            <td><p><span> chocolat et fruits </span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 3</strong></span></p></td>
+                                            <td><p><span>cocotte de patates douces mexicaine</span></p></td>
+                                            <td><p><span> Soupe de lentilles au curry rouge </span></p></td>
+                                            <td><p><span>Pizza au poulet Buffalo</span></p></td>
+                                            <td><p><span>chips de chou frisé</span></p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 4</strong></span></p></td>
+                                            <td><p><span>flocons d'avoine à la gelée de beurre de cacahuète</span></p></td>
+                                            <td><p><span>Nuggets de poulet à la friteuse à air avec courgettes croustillantes </span></p></td>
+                                            <td><p><span>Sauté de poulet aux haricots verts et à l'orange</span></p></td>
+                                            <td><p><span>épinards sans produits laitiers + trempette aux artichauts et légumes </span></p></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 5</strong></span></p></td>
+                                            <td><p><span>gaufres au chocolat</span></p></td>
+                                            <td><p><span> Bol de dinde chipotle</span></p></td>
+                                            <td><p><span>chili à la dinde</span></p></td>
+                                            <td><p><span>Biscuits au chocolat chaud </span></p></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 6</strong></span></p></td>
+                                            <td><p><span>Toast à l'avocat et au bagel tout</span></p></td>
+                                            <td><p><span>Salade Cobb en pot Mason </span></p></td>
+                                            <td><p><span>Wraps de laitue au bœuf coréen </span></p></td>
+                                            <td><p><span>Coupes feuilletées au quinoa et au beurre de cacahuète </span></p></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><p><span><strong>Jour 7</strong></span></p></td>
+                                            <td><p><span>Frittata aux tomates séchées et aux épinards </span></p></td>
+                                            <td><p><span>Courge musquée farcie aux tacos </span></p></td>
+                                            <td><p><span>Pâtes aux champignons dans un pot </span></p></td>
+                                            <td><p><span>Pain aux bananes  </span></p></td>
+
+                                        </tr>
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                            <h3 class="mb-4">Vérifier les complications </h3>
+
+                            </div>
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="{{ url_for('Diabetes') }}">
+                                    <div class="d-flex justify-content-center">
+                                        <div>
+                                            <h5 class="mb-2">Cliquez pour aller au Diagnostic de diabète</h5>
+                    
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                    
+                                    <img src="{{ url_for('static', filename='images/glucose-meter.png') }}" class="custom-block-image img-fluid custom-image" alt="">
+                                </a>
+                            </div>
+                    
+                            <div class="custom-block bg-white shadow-lg">
+                                <a href="{{ url_for('endometrios') }}">
+                                    <div class="d-flex justify-content-center">
+                                        <div>
+                                            <h5 class="mb-2">Cliquez pour aller au Diagnostic de l'Endométriose</h5>
+                    
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                    
+                                    <img src="{{ url_for('static', filename='images/endoima.png') }}" class="custom-block-image img-fluid custom-image" alt="">
+                                </a>
+                            </div>
+
+
+
+
+
+
+
+                                                     
+
+                            <div class="row my-4">
+                            </div>
+
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi bi-gender-female"></i>
+                            <span>SopkDetec</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Bienvenue</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">QFPs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                yassmine.zariat@esprit.tn <br>
+                                contact@itgust-group.tn
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4"> 
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+<!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+    </body>
+</html>

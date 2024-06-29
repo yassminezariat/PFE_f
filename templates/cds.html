@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Detail Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+        <!-- Bootstrap Icons CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">    
+<!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    </head>
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi bi-gender-female"></i>
+                        <span>SopkDetec</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_1">Bienvenue</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_2">Explorer les sujets</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_3">Comment ça fonctionne ?</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_4">QFPs</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-5 col-12 mb-5">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Bienvenue</a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">Causes, diagnostic et symptômes</li>
+                                    
+                                </ol>
+                            </nav>
+
+                            <h2 class="text-white">
+                                Causes, diagnostic et symptômes<br> </h2>
+
+                            <div class="d-flex align-items-center mt-5">
+                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Savoir Plus!</a>
+
+                                <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12">
+                            <div class="topics-detail-block bg-white shadow-lg">
+                                <img src="{{ url_for('static', filename='images/cds.png') }}" class="topics-detail-block-image img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+
+            <section class="topics-detail-section section-padding" id="topics-detail">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 m-auto">
+
+                            <h3 class="mb-4">Points clés  </h3>
+                            <ul style="list-style-type: circle;">
+
+                            <li>Il est important d'avoir un diagnostic rapide du SOPK.</li>
+
+                            <li>Il existe deux groupes de fonctionnalités utilisées dans un diagnostic du SOPK.</li>
+                            
+                            <li>Parfois, si seulement certaines caractéristiques sont présentes,vous pouvez être considéré comme à risque, et un contrôle ultérieur est nécessaire.</li>
+                            </ul>
+                            
+                            <h3 class="mb-4">Quelles sont les causes du SOPK?</h3>
+                            <p>Les <strong>causes exactes du syndrome des ovaires polykystiques </strong> n’ont pas été identifiées à ce jour. Des facteurs génétiques, épigénétiques et environnementaux semblent favoriser le développement SOPK. Ainsi, des mutations sur des gènes paraissent expliquer un cas de SOPK sur 10. Des antécédents familiaux augmentent le risque de souffrir du SOPK. Les perturbateurs endocriniens ont également été mis en cause, sans que la preuve de leur rôle soit démontrée pour l’instant.</p>
+
+
+
+                            <h3 class="mb-4">Quels sont les symptômes du SOPK?</h3>
+                            <p>Les symptômes du syndrome des ovaires polykystiques peuvent différer d’une personne à l’autre. En effet, les symptômes peuvent changer au fil du temps et se manifestent souvent sans facteur déclencheur clairement déterminé.</p>
+                            <p>Parmi les symptômes possibles figurent notamment les suivants :</p> 
+                            <ul style="list-style-type: disc;">
+                            <li><strong>Cycles irréguliers :</strong> absence de règles, retard de règles, saignements abondants pendant les règles.<nav></nav></li>
+                            <li><strong>Pilosité</strong> importante sur le visage, les bras, la poitrine et l'abdomen (hirsutisme).<nav></nav></li>
+                            <li><strong> Acné : </strong>surtout sur le dos, la poitrine et le visage. <nav></li>
+                            <li><strong>Obésité.</strong><nav></nav></li>
+                            <li><strong>Alopécie :</strong> perte de cheveux. <nav></nav></li>
+                            <li><strong> Troubles de la fertilité : </strong>le SOPK est la cause la plus fréquente d'infertilité chez les femmes.<nav></nav></li>
+                            <li><strong>Acanthosis nigricans :</strong> apparition de plaques de peau foncée, dans les plis du cou, des aisselles, de l'aine et sous les seins.<nav></nav></li>
+                            <li><strong>Fatigue.</strong><nav></nav></li>
+                            <li><strong>Dépression, anxiété.</strong><nav></nav></li>
+                            <li><strong>Apnée du sommeil, en cas de surcharge pondérale.</strong> <nav></nav></li>
+                            </ul>   
+                            <h3 class="mb-4">Diagnostic du SOPK:Pourquoi est-ce important pour moi?</h3>
+                            <p>Un diagnostic du SOPK est important pour améliorer la prévention des complications et le traitement. Un diagnostic tardif est associé à de moins bons résultats.</p>
+                            <p>Ces deux éléments sont nécessaires au diagnostic chez les adolescents. L'échographie n'est pas recommandée chez les jeunes femmes, car il est peu probable qu'elle donne une image claire de ce qui se passe au niveau des ovaires.</p>    
+                            <p>Chez les femmes de plus de 20 ans, les deux caractéristiques sont utilisées dans le diagnostic plus</p>
+                            <p><strong>Caractéristiques échographiques d'ovules</strong> partiellement développés dans l'ovaire (apparentés sous la forme d'un cercle noir à l'échographie) ou <strong>d'un test sanguin hormonal (AMH)</strong></p>    
+                            <div class="row my-4">
+
+
+    
+                            </div>
+
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+
+
+                        <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                            <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                                <h4 class="mb-4 pb-2">Recevoir la newsletter</h4>
+
+                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email " required="">
+
+                                <div class="col-lg-12 col-12">
+                                    <button type="submit" class="form-control">S'abonner</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+		
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi bi-gender-female"></i>
+                            <span>SopkDetec</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Bienvenue</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Comment ça fonctionne ?<</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">QFPs</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                yassmine.zariat@esprit.tn <br>
+                                contact@itgust-group.tn                             </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English</button>
+
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                                <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            </ul>
+                        </div>
+
+                        <p class="copyright-text mt-lg-5 mt-4">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+<!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+<script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+    </body>
+</html>

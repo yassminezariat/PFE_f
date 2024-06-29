@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des données</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+</head>
+<body class="topics-listing-page">
+    <div class="container">
+        <h1>Analyse des données</h1>
+        <form action="/analyser" method="POST" class="custom-form contact-form" role="form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Groupe sanguin">Groupe sanguin</label>
+                        <input type="text" class="form-control" id="Groupe sanguin" name="Groupe sanguin">
+                    </div>
+                    <div class="form-group">
+                        <label for="Hb(g/dl)">Hb(g/dl)</label>
+                        <input type="text" class="form-control" id="Hb(g/dl)" name="Hb(g/dl)">
+                    </div> 
+                    <div class="form-group">
+                        <label for="beta_hcg_I">I beta-HCG(mIU/mL)</label>
+                        <input type="text" class="form-control" id="beta_hcg_I" name="beta_hcg_I">
+                    </div>
+                    <div class="form-group">
+                        <label for="beta_hcg_II">II beta-HCG(mIU/mL)</label>
+                        <input type="text" class="form-control" id="beta_hcg_II" name="beta_hcg_II">
+                    </div>
+                    <div class="form-group">
+                        <label for="fsh">FSH(mIU/mL)</label>
+                        <input type="text" class="form-control" id="fsh" name="fsh">
+                    </div>
+                    <div class="form-group">
+                        <label for="lh">LH(mIU/mL)</label>
+                        <input type="text" class="form-control" id="lh" name="lh">
+                    </div>
+                    <div class="form-group">
+                        <label for="fsh_lh">FSH/LH</label>
+                        <input type="text" class="form-control" id="fsh_lh" name="fsh_lh">
+                    </div>
+                    <div class="form-group">
+                        <label for="tsh">TSH (mIU/L)</label>
+                        <input type="text" class="form-control" id="tsh" name="tsh">
+                    </div>
+                    <div class="form-group">
+                        <label for="amh">AMH(ng/mL)</label>
+                        <input type="text" class="form-control" id="amh" name="amh">
+                    </div>
+                    <div class="form-group">
+                        <label for="prl">PRL(ng/mL)</label>
+                        <input type="text" class="form-control" id="prl" name="prl">
+                    </div>
+                    <div class="form-group">
+                        <label for="vit_d3">Vit D3 (ng/mL)</label>
+                        <input type="text" class="form-control" id="vit_d3" name="vit_d3">
+                    </div>
+                    <div class="form-group">
+                        <label for="prg">PRG(ng/mL)</label>
+                        <input type="text" class="form-control" id="prg" name="prg">
+                    </div>
+                    <div class="form-group">
+                        <label for="rbs">RBS(mg/dl)</label>
+                        <input type="text" class="form-control" id="rbs" name="rbs">
+                    </div>
+                    <div class="form-group">
+                        <label for="follicle_l">Follicle No. (L)</label>
+                        <input type="text" class="form-control" id="follicle_l" name="follicle_l">
+                    </div>
+                    <div class="form-group">
+                        <label for="follicle_r">Follicle No. (R)</label>
+                        <input type="text" class="form-control" id="follicle_r" name="follicle_r">
+                    </div>
+                    <div class="form-group">
+                        <label for="avg_f_size_l">Avg. F size (L) (mm)</label>
+                        <input type="text" class="form-control" id="avg_f_size_l" name="avg_f_size_l">
+                    </div>
+                    <div class="form-group">
+                        <label for="avg_f_size_r">Avg. F size (R) (mm)</label>
+                        <input type="text" class="form-control" id="avg_f_size_r" name="avg_f_size_r">
+                    </div>
+                    <div class="form-group">
+                        <label for="endometrium">Endometrium (mm)</label>
+                        <input type="text" class="form-control" id="endometrium" name="endometrium">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Analyser</button>
+        </form>
+    </div>
+    
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+</html>

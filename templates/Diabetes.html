@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head class="site-header d-flex flex-column justify-content-center align-items-center">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des données de diabète</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+</head>
+<body class="topics-listing-page">
+    <div class="container">
+        <h1>Analyse des données</h1>
+        <form id="diabetes_form" action="/analyser_diabete" method="POST" class="custom-form contact-form" role="form">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Glucose">Glucose</label>
+                        <input type="text" class="form-control" id="Glucose" name="Glucose">
+                    </div>
+                    <div class="form-group">
+                        <label for="Pression_artérielle">Pression artérielle</label>
+                        <input type="text" class="form-control" id="Pression_artérielle" name="Pression_artérielle">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Insuline">Insuline</label>
+                        <input type="text" class="form-control" id="Insuline" name="Insuline">
+                    </div>
+                    <div class="form-group">
+                        <label for="Épaisseur_de_la_peau">Épaisseur de la peau</label>
+                        <input type="text" class="form-control" id="Épaisseur_de_la_peau" name="Épaisseur_de_la_peau">
+                    </div>
+                    <div class="form-group">
+                        <label for="Fonction_de_pedigree_du_diabète">Fonction de pedigree du diabète</label>
+                        <input type="text" class="form-control" id="Fonction_de_pedigree_du_diabète" name="Fonction_de_pedigree_du_diabète">
+                    </div>
+                    <div class="form-group">
+                        <label for="Combien_de_fois_avez-vous_été_enceinte">Combien de fois avez-vous été enceinte ?</label>
+                        <input type="text" class="form-control" id="Combien_de_fois_avez-vous_été_enceinte" name="Combien de fois avez-vous été enceinte ?">
+                    </div>
+                    <!-- Ajoutez d'autres champs ici selon vos besoins -->
+                    <button type="submit" class="btn btn-primary">Analyser</button>
+                </div>
+            </div>
+        </form>
+        <div  class="custom-block bg-white shadow-lg" id="resultat_diabete"></div> <!-- Zone pour afficher le résultat -->
+        <div class="message-container" style="display: none;">
+            <p class="custom-block bg-white shadow-lg" id="message"></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+    <script>
+        document.getElementById("diabetes_form").addEventListener("submit", function(event){
+            event.preventDefault();
+    
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/analyser_diabete", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var resultMessage = response.result_message_diabete;
+    
+                    // Afficher le résultat dans la zone dédiée
+                    document.getElementById("resultat_diabete").innerHTML = resultMessage;
+    
+                    // Afficher le message d'encouragement ou de félicitations dans le conteneur spécifié
+                    var messageContainer = document.querySelector(".message-container");
+                    if (resultMessage.includes("prédiabétique")) {
+                        document.getElementById("message").innerText = "On va vous dériger vers votre régime! Prenez soin de vous!";
+                        messageContainer.style.display = "block";
+                        // Redirection après un certain délai
+                        setTimeout(function() {
+                            window.location.href = "/regimediabete"; // Redirection vers index
+                        }, 5000); // Rediriger après 5 secondes
+                    } else if (resultMessage.includes("diabétique")) {
+                        document.getElementById("message").innerText = "On va vous dériger vers votre régime! Prenez soin de vous!";
+                        messageContainer.style.display = "block";
+                        // Redirection après un certain délai
+                        setTimeout(function() {
+                            window.location.href = "/regimediabete"; // Redirection vers index
+                        }, 5000); // Rediriger après 5 secondes
+                    } else {
+                        document.getElementById("message").innerText = "Félicitations! ";
+                        messageContainer.style.display = "block";
+                        // Redirection après un certain délai
+                        setTimeout(function() {
+                            window.location.href = "/index.html"; // Redirection vers index
+                        }, 5000); // Rediriger après 5 secondes
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    
+</body>
+</html>
