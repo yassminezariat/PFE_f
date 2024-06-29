@@ -1,0 +1,18 @@
+ [build]
+  command = "npm run build"  # Specify the build command for your project
+  publish = "dist"           # Specify the directory to publish after building
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[context]]
+  path = "/api/*"
+  command = "npm run api:serve"  # Example: Run a backend API during build/deploy
