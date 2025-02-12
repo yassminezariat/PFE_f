@@ -1,3 +1,5 @@
+# Développement d’une plateforme pour la détection du syndrome des ovaires polykystiques  et la recommandation d’un régime personnalisé 
+
 ![Image](https://github.com/user-attachments/assets/a489b24d-db20-4e73-bd9f-8266c7952d12)
 ![Image](https://github.com/user-attachments/assets/96850bda-05d7-41e3-b94b-21a7450a5535)
 
